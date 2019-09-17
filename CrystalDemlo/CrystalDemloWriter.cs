@@ -25,10 +25,7 @@ namespace CrystalDemlo
             for (int index = 1; index <= colonneLength; index++)
             {
                 int maxValueLine = value - Math.Abs(value - index);
-                var whiteSpaceCount = value - maxValueLine;
-                // var whiteSpaceCount = value - Math.Abs(value - index);
-                    Console.WriteLine($"MaxValueLine: {maxValueLine}");
-                    Console.WriteLine($"whiteSpaceCount: {whiteSpaceCount}");
+                var whiteSpaceCount =  Math.Abs(value - index);
 
                 _writer.Write(new string(' ', whiteSpaceCount));
                 for (var instantValue = 1; instantValue <= maxValueLine; instantValue++)
